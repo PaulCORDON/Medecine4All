@@ -10,13 +10,6 @@ import android.widget.TextView;
 
 
 public class InfoActivity extends AppCompatActivity {
-
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +22,13 @@ public class InfoActivity extends AppCompatActivity {
         TextView nomMedic = (TextView) findViewById(R.id.nom);
         nomMedic.setText(value);
 
-        Parser parser=new Parser();
 
+        Parser parser=new Parser();
         try{
-            parser.getwebsite("http://www.doctissimo.fr/medicament-DOLIPRANE.htm");
+
+            parser.execute("http://www.doctissimo.fr/medicament-DOLIPRANE.htm");
+
+
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -41,7 +37,7 @@ public class InfoActivity extends AppCompatActivity {
         }
         finally {
             TextView classe= (TextView) findViewById(R.id.classe);
-            classe.setText(parser.getExipients());
+            classe.setText(parser.getClasse());
 
             TextView molecule= (TextView) findViewById(R.id.molecule);
             molecule.setText(parser.getMolecule());
@@ -50,15 +46,13 @@ public class InfoActivity extends AppCompatActivity {
             exipients.setText(parser.getExipients());
 
             TextView prix = (TextView) findViewById(R.id.prix);
-            prix.setText(parser.getTaux());
+            prix.setText(parser.getPrix());
 
             TextView taux = (TextView) findViewById(R.id.taux);
             taux.setText(parser.getTaux());
 
             TextView labo = (TextView) findViewById(R.id.labo);
-            labo.setText(parser.getTaux());
-
-
+            labo.setText(parser.getLabo());
 
         }
 

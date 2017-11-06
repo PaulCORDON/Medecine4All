@@ -20,8 +20,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom :"
-                tools:ignore="HardcodedText" />
+                android:text="@string/nom"
+                 />
 
             <TextView
                 android:id="@+id/nom"
@@ -29,8 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="Doliprane"
-                tools:ignore="HardcodedText" />
+                android:text="@string/doliprane"
+                 />
         </TableRow>
 
         <TableRow
@@ -47,8 +47,8 @@
                 android:id="@+id/classe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:ignore="HardcodedText" />
+                android:text=""
+                 />
         </TableRow>
 
         <TableRow
@@ -59,8 +59,8 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Molécule :"
-                tools:ignore="HardcodedText" />
+                android:text="@string/molecule"
+                 />
 
             <TextView
                 android:id="@+id/molecule"
@@ -78,15 +78,15 @@
                 android:id="@+id/Prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prix"
-                tools:ignore="HardcodedText" />
+                android:text="@string/prix"
+                 />
 
             <TextView
                 android:id="@+id/prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="prix"
-                tools:ignore="HardcodedText" />
+                android:text=""
+                 />
         </TableRow>
 
         <TableRow
@@ -104,8 +104,8 @@
                 android:id="@+id/taux"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="65%"
-                tools:ignore="HardcodedText" />
+                android:text=""
+                />
         </TableRow>
 
         <TableRow
@@ -123,8 +123,7 @@
                 android:id="@+id/exipients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amidon de riz,  Glycérol distéarate, Magnésium stéarate (E572),  Enveloppe de la gélule : Gélatine,  Titane dioxyde (E171),  Jaune de quinoléine (E104),  Fer oxyde (E172),  Bleu patenté V (E131)"
-                tools:ignore="HardcodedText" />
+                android:text="" />
         </TableRow>
 
         <TableRow
@@ -142,8 +141,7 @@
                 android:id="@+id/labo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="labo"
-                tools:ignore="HardcodedText" />
+                android:text="" />
         </TableRow>
 
     </TableLayout>

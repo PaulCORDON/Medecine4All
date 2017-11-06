@@ -14,4 +14,8 @@
     <string name="ocr_success">Text read successfully</string>
     <string name="ocr_failure">No text captured</string>
     <string name="ocr_error">"Error reading text: %1$s"</string>
+    <string name="nom">Nom :</string>
+    <string name="doliprane">Doliprane</string>
+    <string name="molecule">Molecule :</string>
+    <string name="prix">Prix</string>
 </resources>
