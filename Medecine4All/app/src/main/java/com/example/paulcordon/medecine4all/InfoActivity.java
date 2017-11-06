@@ -40,17 +40,26 @@ public class InfoActivity extends AppCompatActivity {
 
         }
         finally {
+            TextView classe= (TextView) findViewById(R.id.classe);
+            classe.setText(parser.getExipients());
+
             TextView molecule= (TextView) findViewById(R.id.molecule);
             molecule.setText(parser.getMolecule());
-
-            TextView taux = (TextView) findViewById(R.id.taux);
-            taux.setText(parser.getTaux());
 
             TextView exipients = (TextView) findViewById(R.id.exipients);
             exipients.setText(parser.getExipients());
 
-            TextView classe= (TextView) findViewById(R.id.classe);
-            classe.setText(parser.getExipients());
+            TextView prix = (TextView) findViewById(R.id.prix);
+            prix.setText(parser.getTaux());
+
+            TextView taux = (TextView) findViewById(R.id.taux);
+            taux.setText(parser.getTaux());
+
+            TextView labo = (TextView) findViewById(R.id.labo);
+            labo.setText(parser.getTaux());
+
+
+
         }
 
     }
