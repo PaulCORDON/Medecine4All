@@ -22,10 +22,9 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Bundle b = new Bundle();
-        b = getIntent().getExtras();
-        String value = b.getString("text");
-        value = value.toUpperCase();
+        Bundle bundle = getIntent().getExtras();
+        String value = bundle.getString("text");
+        /*value = value.toUpperCase();*/
 
         TextView nomMedic = (TextView) findViewById(R.id.nom);
         nomMedic.setText(value);
@@ -33,7 +32,7 @@ public class InfoActivity extends AppCompatActivity {
         Parser parser=new Parser();
 
         try{
-            parser.getwebsite("http://www.doctissimo.fr/medicament-"+value+".htm");
+            parser.getwebsite("http://www.doctissimo.fr/medicament-DOLIPRANE.htm");
         }
         catch (Exception e) {
             e.printStackTrace();
