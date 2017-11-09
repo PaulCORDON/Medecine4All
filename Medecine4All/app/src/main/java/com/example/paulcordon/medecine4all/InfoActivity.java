@@ -19,6 +19,7 @@ public class InfoActivity extends AppCompatActivity {
         String value = bundle.getString("text");
         /*value = value.toUpperCase();*/
 
+
         TextView nomMedic = (TextView) findViewById(R.id.nom);
         nomMedic.setText(value);
 

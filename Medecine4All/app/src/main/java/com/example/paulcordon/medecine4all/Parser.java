@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by paul cordon on 25/10/2017.
+ * Created by Cordon Paul on 07/11/2017.
  */
 
 class Parser {
@@ -50,6 +50,7 @@ class Parser {
             @Override
             public void run() {
                 try {
+                    Log.d("info","try");
                     String info;
                     String tabInfo[];
                     // Connection au site
@@ -67,6 +68,12 @@ class Parser {
                     info=info.replaceFirst("Laboratoire","azertyuiop");
                     tabInfo=info.split("azertyuiop");
                     if(tabInfo.length==7) {
+                        Log.d("classe","->"+tabInfo[1]);
+                        Log.d("molecule","->"+tabInfo[2]);
+                        Log.d("exipients","->"+tabInfo[3]);
+                        Log.d("statut","->"+tabInfo[4]);
+                        Log.d("taux","->"+tabInfo[5]);
+                        Log.d("labo","->"+tabInfo[6]);
                         classe = tabInfo[1];
                         molecule = tabInfo[2];
                         exipients = tabInfo[3];
