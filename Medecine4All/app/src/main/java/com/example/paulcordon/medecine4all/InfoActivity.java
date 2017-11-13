@@ -2,6 +2,7 @@ package com.example.paulcordon.medecine4all;
 
 
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -17,17 +18,19 @@ public class InfoActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         String value = bundle.getString("text");
-        /*value = value.toUpperCase();*/
+        value = value.toUpperCase();
 
-
-        TextView nomMedic = (TextView) findViewById(R.id.nom);
+        String url="http://www.doctissimo.fr/medicament-"+value+".htm";
+        Log.d("value","->"+value);
+        Log.d("url","->"+url);
+        TextView nomMedic = findViewById(R.id.nom);
         nomMedic.setText(value);
 
 
         Parser parser=new Parser();
         try{
 
-            parser.execute("http://www.doctissimo.fr/medicament-DOLIPRANE.htm");
+            parser.execute(url);
 
 
         }

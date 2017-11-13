@@ -46,6 +46,7 @@ class Parser {
 
 
     void execute (String url){
+        final String urlCopie=url;
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -54,7 +55,7 @@ class Parser {
                     String info;
                     String tabInfo[];
                     // Connection au site
-                    Document doc = Jsoup.connect("http://www.doctissimo.fr/medicament-DOLIPRANE.htm").get();
+                    Document doc = Jsoup.connect(urlCopie).get();
 
                     List<String> link = doc.getElementsByClass("medtab").eachText();
 
