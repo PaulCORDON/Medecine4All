@@ -22,7 +22,12 @@ class Parser {
     private String prix = "prix";
     private String labo = "laboratoire";
     private String taux ="taux de remboursement";
+
+
+
+    private String indesirable ="";
     private boolean urlValide=true;
+
 
     boolean isUrlValide() {
         return urlValide;
@@ -45,7 +50,9 @@ class Parser {
     String getTaux() {
         return taux;
     }
-
+    String getIndesirable() {
+        return indesirable;
+    }
 
     void execute (String url){
         final String urlCopie=url;
@@ -70,6 +77,13 @@ class Parser {
                     info=info.replaceFirst("Tx de remboursement SS","azertyuiop");
                     info=info.replaceFirst("Laboratoire","azertyuiop");
                     tabInfo=info.split("azertyuiop");
+
+                    link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
+                    for (String s:link) {
+                        indesirable+=s;
+                    }
+                    Log.d("indesirable","->"+indesirable);
+
                     if(tabInfo.length==7) {
                         classe = tabInfo[1];
                         molecule = tabInfo[2];

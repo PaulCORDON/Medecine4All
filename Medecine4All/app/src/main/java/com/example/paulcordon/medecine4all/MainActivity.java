@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {private static final String
     // A TextToSpeech engine for speaking a String value.
     private TextToSpeech tts;
 
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {private static final String
                     public void onInit(final int status) {
                         if (status == TextToSpeech.SUCCESS) {
                             Log.d("TTS", "Text to speech engine started successfully.");
-                            tts.setLanguage(Locale.US);
+                            tts.setLanguage(Locale.FRANCE);
                         } else {
                             Log.d("TTS", "Error starting the text to speech engine.");
                         }
@@ -317,6 +318,7 @@ public class MainActivity extends AppCompatActivity {private static final String
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
                 // Speak the string.
+                tts.setLanguage(Locale.FRANCE);
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
 
                 Intent intent = new Intent(MainActivity.this, InfoActivity.class);

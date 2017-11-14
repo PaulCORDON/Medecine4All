@@ -9,19 +9,20 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nom"
-                 />
+                android:text="@string/nom" />
 
             <TextView
                 android:id="@+id/nom"
@@ -29,13 +30,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="@string/doliprane"
-                 />
+                android:text="" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,20 +47,34 @@
                 android:id="@+id/classe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                 />
+                android:text="" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statut" />
+
+            <TextView
+                android:id="@+id/Statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/molecule"
-                 />
+                android:text="@string/molecule" />
 
             <TextView
                 android:id="@+id/molecule"
@@ -68,30 +82,32 @@
                 android:layout_height="wrap_content"
                 android:text="" />
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/Prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prix"
-                 />
+                android:text="@string/prix" />
 
             <TextView
                 android:id="@+id/prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                 />
+                android:text="" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView9"
@@ -104,8 +120,7 @@
                 android:id="@+id/taux"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                />
+                android:text="" />
         </TableRow>
 
         <TableRow
@@ -114,8 +129,8 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="Excipients :"
                 tools:ignore="HardcodedText" />
 
@@ -147,13 +162,13 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/EFIND"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="221dp"
+        android:layout_marginStart="46dp"
         android:text="Effets indésirables"
         tools:ignore="HardcodedText" />
 
@@ -161,11 +176,11 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="25dp"
         android:text="Précautions"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
         tools:ignore="HardcodedText" />
 
 </RelativeLayout>

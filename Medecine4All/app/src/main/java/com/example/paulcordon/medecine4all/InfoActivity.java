@@ -3,11 +3,13 @@ package com.example.paulcordon.medecine4all;
 
 import android.os.Bundle;
 import android.os.Debug;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
-
+import java.util.Locale;
 
 
 public class InfoActivity extends AppCompatActivity {
@@ -15,6 +17,8 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+        Button efIndesirable= findViewById(R.id.EFIND);
+
 
         Bundle bundle = getIntent().getExtras();
         String value = bundle.getString("text");
@@ -54,6 +58,9 @@ public class InfoActivity extends AppCompatActivity {
         TextView exipients =  findViewById(R.id.exipients);
         exipients.setText(parser.getExipients());
 
+        TextView statut =  findViewById(R.id.Statut);
+        statut.setText(parser.getStatut());
+
         TextView prix =  findViewById(R.id.prix);
         prix.setText(parser.getPrix());
 
@@ -62,6 +69,7 @@ public class InfoActivity extends AppCompatActivity {
 
         TextView labo =  findViewById(R.id.labo);
         labo.setText(parser.getLabo());
+
 
     }
 }
