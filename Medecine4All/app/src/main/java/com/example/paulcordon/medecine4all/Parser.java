@@ -15,14 +15,18 @@ import java.util.List;
 class Parser {
 
 
-    private String classe = "classe therapeutique";
+    private String classe = "non trouve";
     private String molecule = "molecule";
     private String exipients = "exipients";
     private String statut = "statut";
     private String prix = "prix";
     private String labo = "laboratoire";
     private String taux ="taux de remboursement";
+    private boolean urlValide=true;
 
+    boolean isUrlValide() {
+        return urlValide;
+    }
     String getPrix() {
         return prix;    }
     String getClasse() {return classe;}
@@ -102,6 +106,7 @@ class Parser {
                 catch (IOException e) {
                     e.printStackTrace();
                     Log.d("error","->"+e);
+                    urlValide=false;
                 }
 
             }

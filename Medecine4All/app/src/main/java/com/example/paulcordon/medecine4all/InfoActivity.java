@@ -39,27 +39,29 @@ public class InfoActivity extends AppCompatActivity {
             Log.d("error","->"+e);
 
         }
-        
-        while(parser.getClasse().equals("classe therapeutique")){
+
+        while(parser.getClasse().equals("non trouve")&& parser.isUrlValide()){
             Log.d("info","after try catch info");
-            TextView classe=  findViewById(R.id.classe);
-            classe.setText(parser.getClasse());
 
-            TextView molecule=  findViewById(R.id.molecule);
-            molecule.setText(parser.getMolecule());
-
-            TextView exipients =  findViewById(R.id.exipients);
-            exipients.setText(parser.getExipients());
-
-            TextView prix =  findViewById(R.id.prix);
-            prix.setText(parser.getPrix());
-
-            TextView taux =  findViewById(R.id.taux);
-            taux.setText(parser.getTaux());
-
-            TextView labo =  findViewById(R.id.labo);
-            labo.setText(parser.getLabo());
         }
+        Log.d("info","after while urlValide ->"+parser.isUrlValide());
+        TextView classe=  findViewById(R.id.classe);
+        classe.setText(parser.getClasse());
+
+        TextView molecule=  findViewById(R.id.molecule);
+        molecule.setText(parser.getMolecule());
+
+        TextView exipients =  findViewById(R.id.exipients);
+        exipients.setText(parser.getExipients());
+
+        TextView prix =  findViewById(R.id.prix);
+        prix.setText(parser.getPrix());
+
+        TextView taux =  findViewById(R.id.taux);
+        taux.setText(parser.getTaux());
+
+        TextView labo =  findViewById(R.id.labo);
+        labo.setText(parser.getLabo());
 
     }
 }
