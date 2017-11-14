@@ -37,7 +37,7 @@ import com.google.android.gms.vision.text.TextRecognizer;
 import java.io.IOException;
 import java.util.Locale;
 
-
+/* Test pour mon premier commit */
 public class MainActivity extends AppCompatActivity {private static final String TAG = "OcrCaptureActivity";
     // Intent request code to handle updating play services if needed.
     private static final int RC_HANDLE_GMS = 9001;
