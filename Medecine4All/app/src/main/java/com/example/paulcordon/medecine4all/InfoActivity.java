@@ -39,6 +39,7 @@ public class InfoActivity extends AppCompatActivity {
             Log.d("error","->"+e);
 
         }
+        
         while(parser.getClasse().equals("classe therapeutique")){
             Log.d("info","after try catch info");
             TextView classe=  findViewById(R.id.classe);
