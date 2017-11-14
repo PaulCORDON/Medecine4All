@@ -25,9 +25,7 @@ class Parser {
 
     String getPrix() {
         return prix;    }
-    String getClasse() {
-        return classe;
-    }
+    String getClasse() {return classe;}
     String getMolecule() {
         return molecule;
     }
@@ -69,18 +67,19 @@ class Parser {
                     info=info.replaceFirst("Laboratoire","azertyuiop");
                     tabInfo=info.split("azertyuiop");
                     if(tabInfo.length==7) {
-                        Log.d("classe","->"+tabInfo[1]);
-                        Log.d("molecule","->"+tabInfo[2]);
-                        Log.d("exipients","->"+tabInfo[3]);
-                        Log.d("statut","->"+tabInfo[4]);
-                        Log.d("taux","->"+tabInfo[5]);
-                        Log.d("labo","->"+tabInfo[6]);
                         classe = tabInfo[1];
                         molecule = tabInfo[2];
                         exipients = tabInfo[3];
                         statut =tabInfo[4];
                         taux =tabInfo[5];
                         labo = tabInfo[6];
+                        Log.d("classe","->"+classe);
+                        Log.d("molecule","->"+molecule);
+                        Log.d("exipients","->"+exipients);
+                        Log.d("statut","->"+statut);
+                        Log.d("taux","->"+taux);
+                        Log.d("labo","->"+labo);
+
                     }
                     else if(tabInfo.length==8) {
                         classe = tabInfo[1];
@@ -90,6 +89,13 @@ class Parser {
                         prix = tabInfo[5];
                         taux = tabInfo[6];
                         labo = tabInfo[7];
+                        Log.d("classe","->"+classe);
+                        Log.d("molecule","->"+molecule);
+                        Log.d("exipients","->"+exipients);
+                        Log.d("statut","->"+statut);
+                        Log.d("prix","->"+prix);
+                        Log.d("taux","->"+taux);
+                        Log.d("labo","->"+labo);
                     }
 
                 }

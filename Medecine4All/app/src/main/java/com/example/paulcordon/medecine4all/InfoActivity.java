@@ -31,7 +31,7 @@ public class InfoActivity extends AppCompatActivity {
         try{
 
             parser.execute(url);
-
+            Log.d("info","try after parser");
 
         }
         catch (Exception e) {
@@ -39,25 +39,25 @@ public class InfoActivity extends AppCompatActivity {
             Log.d("error","->"+e);
 
         }
-        finally {
-            TextView classe= (TextView) findViewById(R.id.classe);
+        while(parser.getClasse().equals("classe therapeutique")){
+            Log.d("info","after try catch info");
+            TextView classe=  findViewById(R.id.classe);
             classe.setText(parser.getClasse());
 
-            TextView molecule= (TextView) findViewById(R.id.molecule);
+            TextView molecule=  findViewById(R.id.molecule);
             molecule.setText(parser.getMolecule());
 
-            TextView exipients = (TextView) findViewById(R.id.exipients);
+            TextView exipients =  findViewById(R.id.exipients);
             exipients.setText(parser.getExipients());
 
-            TextView prix = (TextView) findViewById(R.id.prix);
+            TextView prix =  findViewById(R.id.prix);
             prix.setText(parser.getPrix());
 
-            TextView taux = (TextView) findViewById(R.id.taux);
+            TextView taux =  findViewById(R.id.taux);
             taux.setText(parser.getTaux());
 
-            TextView labo = (TextView) findViewById(R.id.labo);
+            TextView labo =  findViewById(R.id.labo);
             labo.setText(parser.getLabo());
-
         }
 
     }
