@@ -325,7 +325,7 @@ public class MainActivity extends AppCompatActivity {private static final String
                 Bundle b = new Bundle();
                 intent.putExtra("text", text.getValue());
                 startActivity(intent);
-                finish();
+
 
             }
             else {

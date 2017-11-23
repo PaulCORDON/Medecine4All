@@ -35,7 +35,8 @@
 
         <activity
             android:name=".InfoActivity"
-            android:label="Scan Medicament">
+            android:label="Informations sur le médicament scanné"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

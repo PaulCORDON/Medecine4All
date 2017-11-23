@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\Florentin\Desktop\GitHub\Android\Medecine4all\Medecine4All.iml" filepath="C:\Users\Florentin\Desktop\GitHub\Android\Medecine4all\Medecine4All.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Medecine4all.iml" filepath="$PROJECT_DIR$/Medecine4all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Medecine4All.iml" filepath="$PROJECT_DIR$/Medecine4All.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Florentin\Desktop\GitHub\Android\Medecine4all\app\app.iml" filepath="C:\Users\Florentin\Desktop\GitHub\Android\Medecine4all\app\app.iml" />
     </modules>
   </component>
 </project>

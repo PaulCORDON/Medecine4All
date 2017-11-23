@@ -6,6 +6,7 @@ import android.os.Debug;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -62,7 +63,16 @@ public class InfoActivity extends AppCompatActivity {
         statut.setText(parser.getStatut());
 
         TextView prix =  findViewById(R.id.prix);
-        prix.setText(parser.getPrix());
+        if(parser.getPrix().equals("prix")){
+            prix.setVisibility(View.INVISIBLE);
+            TextView titrePrix =  findViewById(R.id.Prix);
+            titrePrix.setVisibility(View.INVISIBLE);
+        }
+        else{
+            prix.setText(parser.getPrix());
+        }
+
+
 
         TextView taux =  findViewById(R.id.taux);
         taux.setText(parser.getTaux());
@@ -72,4 +82,5 @@ public class InfoActivity extends AppCompatActivity {
 
 
     }
+
 }

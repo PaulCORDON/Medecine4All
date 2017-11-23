@@ -58,7 +58,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Statut" />
+                android:text="Statut : " />
 
             <TextView
                 android:id="@+id/Statut"
@@ -93,13 +93,33 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/Prix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/prix" />
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Excipients :"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/prix"
+                android:id="@+id/exipients"
+                android:layout_width="0dip"
+                android:layout_gravity="fill_horizontal"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laboratoire : "
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/labo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="" />
@@ -128,32 +148,13 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Excipients :"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/exipients"
+                android:id="@+id/Prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:text="Prix :" />
 
             <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Laboratoire"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/labo"
+                android:id="@+id/prix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="" />
