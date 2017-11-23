@@ -318,7 +318,6 @@ public class MainActivity extends AppCompatActivity {private static final String
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
                 // Speak the string.
-                tts.setLanguage(Locale.FRANCE);
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
 
                 Intent intent = new Intent(MainActivity.this, InfoActivity.class);

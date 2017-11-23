@@ -166,15 +166,15 @@
         android:id="@+id/EFIND"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
+        android:layout_alignBaseline="@+id/PRECAUTION"
+        android:layout_alignBottom="@+id/PRECAUTION"
         android:layout_alignParentStart="true"
         android:layout_marginStart="46dp"
         android:text="Effets indésirables"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/PRECAUTION"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

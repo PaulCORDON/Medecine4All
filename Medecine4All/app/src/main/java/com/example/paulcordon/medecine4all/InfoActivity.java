@@ -14,15 +14,37 @@ import java.util.Locale;
 
 
 public class InfoActivity extends AppCompatActivity {
+    private TextToSpeech tts;
+    Parser parser=new Parser();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         Button efIndesirable= findViewById(R.id.EFIND);
+        Button précaution=findViewById(R.id.PRECAUTION);
+
+
+
+        TextToSpeech.OnInitListener listener =
+                new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(final int status) {
+                        if (status == TextToSpeech.SUCCESS) {
+                            Log.d("TTS ActInfo", "Text to speech engine started successfully.");
+                            tts.setLanguage(Locale.FRANCE);
+                        } else {
+                            Log.d("TTS ActInfo", "Error starting the text to speech engine.");
+                        }
+                    }
+                };
+        tts = new TextToSpeech(this.getApplicationContext(), listener);
 
 
         Bundle bundle = getIntent().getExtras();
+
+        assert bundle != null;
         String value = bundle.getString("text");
+        assert value != null;
         value = value.toUpperCase();
 
         String url="http://www.doctissimo.fr/medicament-"+value+".htm";
@@ -32,7 +54,7 @@ public class InfoActivity extends AppCompatActivity {
         nomMedic.setText(value);
 
 
-        Parser parser=new Parser();
+
         try{
 
             parser.execute(url);
@@ -72,13 +94,23 @@ public class InfoActivity extends AppCompatActivity {
             prix.setText(parser.getPrix());
         }
 
-
-
         TextView taux =  findViewById(R.id.taux);
         taux.setText(parser.getTaux());
 
         TextView labo =  findViewById(R.id.labo);
         labo.setText(parser.getLabo());
+        efIndesirable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tts.speak(parser.getIndesirable(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+            }
+        });
+        précaution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tts.speak(parser.getPrecaution(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+            }
+        });
 
 
     }

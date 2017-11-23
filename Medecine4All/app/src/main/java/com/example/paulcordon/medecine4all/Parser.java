@@ -26,6 +26,10 @@ class Parser {
 
 
     private String indesirable ="";
+
+
+
+    private String precaution = "";
     private boolean urlValide=true;
 
 
@@ -52,6 +56,9 @@ class Parser {
     }
     String getIndesirable() {
         return indesirable;
+    }
+    String getPrecaution() {
+        return precaution;
     }
 
     void execute (String url){
@@ -83,6 +90,12 @@ class Parser {
                         indesirable+=s;
                     }
                     Log.d("indesirable","->"+indesirable);
+
+                    link = doc.getElementById("div_2").getElementsByClass("AmmListePuces1").eachText();
+                    for (String s:link) {
+                        precaution+=s;
+                    }
+                    Log.d("precaution","->"+precaution);
 
                     if(tabInfo.length==7) {
                         classe = tabInfo[1];
