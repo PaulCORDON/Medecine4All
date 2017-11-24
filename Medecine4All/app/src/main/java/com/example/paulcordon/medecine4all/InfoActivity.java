@@ -102,13 +102,24 @@ public class InfoActivity extends AppCompatActivity {
         efIndesirable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tts.speak(parser.getIndesirable(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                if(!tts.isSpeaking()){
+                    tts.speak(parser.getIndesirable(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                }
+                else{
+                    tts.stop();
+                }
+
             }
         });
         précaution.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tts.speak(parser.getPrecaution(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                if(!tts.isSpeaking()){
+                    tts.speak(parser.getPrecaution(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                }
+                else{
+                    tts.stop();
+                }
             }
         });
 
