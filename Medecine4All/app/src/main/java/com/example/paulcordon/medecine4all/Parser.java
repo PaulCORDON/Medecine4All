@@ -23,13 +23,26 @@ class Parser {
     private String labo = "laboratoire";
     private String taux ="taux de remboursement";
 
+    private boolean classeIsPresent = false;
+    private boolean moleculeIsPresent= false;
+    private boolean exipientIsPresent = false;
+    private boolean statutIsPresent = false;
+    private boolean prixIsPresent = false;
+    private boolean laboIsPresent = false;
+    private boolean tauxIsPresent = false;
 
+    private int location=1;
+    private int classeLocation;
+    private int moleculeLocation;
+    private int exipientLocation;
+    private int statutLocation;
+    private int prixLocation;
+    private int laboLocation;
+    private int tauxLocation;
 
     private String indesirable ="";
-
-
-
     private String precaution = "";
+
     private boolean urlValide=true;
 
 
@@ -76,13 +89,49 @@ class Parser {
                     List<String> link = doc.getElementsByClass("medtab").eachText();
 
                     info=link.get(0);
-                    info=info.replaceFirst("Classe thérapeutique","azertyuiop");
-                    info=info.replaceFirst("Principes actifs","azertyuiop");
-                    info=info.replaceFirst("Excipients","azertyuiop");
-                    info=info.replaceFirst("Statut","azertyuiop");
-                    info=info.replaceFirst("Prix de vente TTC","azertyuiop");
-                    info=info.replaceFirst("Tx de remboursement SS","azertyuiop");
-                    info=info.replaceFirst("Laboratoire","azertyuiop");
+                    if(info.contains("Classe thérapeutique")){
+                        classeIsPresent=true;
+                        classeLocation=location;
+                        location++;
+                        info=info.replaceFirst("Classe thérapeutique","azertyuiop");
+                    }
+                    if(info.contains("Principes actifs")){
+                       moleculeIsPresent=true;
+                       moleculeLocation=location;
+                       location++;
+                       info=info.replaceFirst("Principes actifs","azertyuiop");
+                    }
+                    if(info.contains("Excipients")){
+                        exipientIsPresent=true;
+                        exipientLocation=location;
+                        location++;
+                        info=info.replaceFirst("Excipients","azertyuiop");
+                    }
+                    if(info.contains("Statut")){
+                        statutIsPresent=true;
+                        statutLocation=location;
+                        location++;
+                        info=info.replaceFirst("Statut","azertyuiop");
+                    }
+                    if(info.contains("Prix de vente TTC")){
+                       prixIsPresent=true;
+                       prixLocation=location;
+                       location++;
+                       info=info.replaceFirst("Prix de vente TTC","azertyuiop");
+                    }
+                    if(info.contains("Tx de remboursement SS")){
+                        tauxIsPresent=true;
+                        tauxLocation=location;
+                        location++;
+                        info=info.replaceFirst("Tx de remboursement SS","azertyuiop");
+                    }
+                    if(info.contains("Laboratoire")){
+                        laboIsPresent=true;
+                        laboLocation=location;
+                        location++;
+                        info=info.replaceFirst("Laboratoire","azertyuiop");
+                    }
+
                     tabInfo=info.split("azertyuiop");
 
                     link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
@@ -97,35 +146,32 @@ class Parser {
                     }
                     Log.d("precaution","->"+precaution);
 
-                    if(tabInfo.length==7) {
-                        classe = tabInfo[1];
-                        molecule = tabInfo[2];
-                        exipients = tabInfo[3];
-                        statut =tabInfo[4];
-                        taux =tabInfo[5];
-                        labo = tabInfo[6];
+                    if(classeIsPresent){
+                        classe = tabInfo[classeLocation];
                         Log.d("classe","->"+classe);
-                        Log.d("molecule","->"+molecule);
-                        Log.d("exipients","->"+exipients);
-                        Log.d("statut","->"+statut);
-                        Log.d("taux","->"+taux);
-                        Log.d("labo","->"+labo);
-
                     }
-                    else if(tabInfo.length==8) {
-                        classe = tabInfo[1];
-                        molecule = tabInfo[2];
-                        exipients = tabInfo[3];
-                        statut = tabInfo[4];
-                        prix = tabInfo[5];
-                        taux = tabInfo[6];
-                        labo = tabInfo[7];
-                        Log.d("classe","->"+classe);
+                    if(moleculeIsPresent){
+                        molecule = tabInfo[moleculeLocation];
                         Log.d("molecule","->"+molecule);
+                    }
+                    if(exipientIsPresent){
+                        exipients = tabInfo[exipientLocation];
                         Log.d("exipients","->"+exipients);
+                    }
+                    if(statutIsPresent){
+                        statut = tabInfo[statutLocation];
                         Log.d("statut","->"+statut);
+                    }
+                    if(prixIsPresent){
+                        prix = tabInfo[prixLocation];
                         Log.d("prix","->"+prix);
+                    }
+                    if(tauxIsPresent){
+                        taux = tabInfo[tauxLocation];
                         Log.d("taux","->"+taux);
+                    }
+                    if(laboIsPresent) {
+                        labo = tabInfo[laboLocation];
                         Log.d("labo","->"+labo);
                     }
 
