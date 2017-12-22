@@ -2,7 +2,6 @@ package com.example.paulcordon.medecine4all;
 
 
 import android.os.Bundle;
-import android.os.Debug;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;

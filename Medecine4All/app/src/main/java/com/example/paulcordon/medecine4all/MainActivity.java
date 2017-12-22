@@ -310,7 +310,7 @@ public class MainActivity extends AppCompatActivity {private static final String
      * @return true if the tap was on a TextBlock
      */
     private boolean onTap(float rawX, float rawY) {
-        // TODO: Speak the text when the user taps on screen.
+
         OcrGraphic graphic = mGraphicOverlay.getGraphicAtLocation(rawX, rawY);
         TextBlock text = null;
         if (graphic != null) {
@@ -320,7 +320,7 @@ public class MainActivity extends AppCompatActivity {private static final String
                 // Speak the string.
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
 
-                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                Intent intent = new Intent(MainActivity.this, ResultatRechercheActivity.class);
                 Bundle b = new Bundle();
                 intent.putExtra("text", text.getValue());
                 startActivity(intent);
