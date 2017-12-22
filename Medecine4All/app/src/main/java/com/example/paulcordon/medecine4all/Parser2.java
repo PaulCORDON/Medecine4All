@@ -12,9 +12,9 @@ import java.util.List;
  * Created by Cordon Paul on 07/11/2017.
  */
 
-public class Parser2 {
+ class Parser2 {
 
-    public List<String> link1=null;
+   List<String> link1=null;
     private boolean urlValide=true;
 
 

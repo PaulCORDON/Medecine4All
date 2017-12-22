@@ -1,5 +1,6 @@
 package com.example.paulcordon.medecine4all;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,8 +26,12 @@ public class ResultatRechercheActivity extends AppCompatActivity {
         assert value != null;
         value = value.toUpperCase();
         Log.d("value"," "+value);
-        Parser2 p=new Parser2();
+
+
+        final Parser2 p=new Parser2();
+
         p.execute(value);
+
         setContentView(R.layout.activity_resultat_recherche);
         Button btn1= findViewById(R.id.btn1);
         Button btn2= findViewById(R.id.btn2);
@@ -48,7 +53,7 @@ public class ResultatRechercheActivity extends AppCompatActivity {
         Button btn18= findViewById(R.id.btn18);
         Button btn19= findViewById(R.id.btn19);
         Button btn20= findViewById(R.id.btn20);
-        ArrayList<Button> btnList=new ArrayList<>();
+        final ArrayList<Button> btnList=new ArrayList<>();
         btnList.add(btn1);
         btnList.add(btn2);
         btnList.add(btn3);
@@ -72,16 +77,44 @@ public class ResultatRechercheActivity extends AppCompatActivity {
 
 
 
-        while(p.link1!=null){
+        while(p.link1==null){
 
         }
-        for(int i=0;i<p.link1.size();i++){
-            btnList.get(i).setText(p.link1.get(i));
-            btnList.get(i).setVisibility(View.VISIBLE);
+        if(p.link1.size()==0){
+            btn1.setText("Aucun resultat");
+            btn1.setVisibility(View.VISIBLE);
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in=new Intent(ResultatRechercheActivity.this,MainActivity.class);
+                    startActivity(in);
+                }
+            });
+           
         }
+        else if (p.link1.size()==1){
+            Intent in=new Intent(ResultatRechercheActivity.this,InfoActivity.class);
+            Bundle b = new Bundle();
+            in.putExtra("text",p.link1.get(0));
+            startActivity(in);
+        }
+        else{
+            for(int i=0;i<p.link1.size() && i<btnList.size();i++){
+                btnList.get(i).setText(p.link1.get(i));
+                btnList.get(i).setVisibility(View.VISIBLE);
 
 
+                btnList.get(i).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent in=new Intent(ResultatRechercheActivity.this,InfoActivity.class);
+                        Bundle b = new Bundle();
+                        in.putExtra("text",((Button)v).getText());
+                        startActivity(in);
+                    }
+                });
 
-
+            }
+        }
     }
 }

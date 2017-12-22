@@ -44,7 +44,7 @@ public class InfoActivity extends AppCompatActivity {
         assert bundle != null;
         String value = bundle.getString("text");
         assert value != null;
-        value = value.toUpperCase();
+        value = value.toUpperCase().replaceAll(" ", "-").replaceAll("/","-");
 
         String url="http://www.doctissimo.fr/medicament-"+value+".htm";
         Log.d("value","->"+value);
