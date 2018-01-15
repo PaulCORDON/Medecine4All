@@ -6,182 +6,200 @@
     android:layout_height="match_parent"
     tools:context="com.example.paulcordon.medecine4all.InfoActivity">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_height="match_parent">
 
-
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nom" />
+                android:lineSpacingExtra="30sp"
+                android:text="@string/nom"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:lineSpacingExtra="30sp" />
 
             <TextView
                 android:id="@+id/nom"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="30sp"
                 android:text="Classe : "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/classe"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Statut : " />
+                android:lineSpacingExtra="30sp"
+                android:text="Statut : "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Statut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/molecule" />
+                android:lineSpacingExtra="30sp"
+                android:text="@string/molecule"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/molecule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:lineSpacingExtra="30sp"
                 android:text="Excipients :"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/exipients"
-                android:layout_width="0dip"
-                android:layout_gravity="fill_horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="30sp"
                 android:text="Laboratoire : "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/labo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="30sp"
                 android:text="Taux de remboursement : "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/taux"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/Prix"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Prix :" />
+                android:lineSpacingExtra="30sp"
+                android:text="Prix :"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/prix"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-        </TableRow>
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center" />
 
-    </TableLayout>
+            <Button
+                android:id="@+id/EFIND"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/PRECAUTION"
+                android:layout_alignBottom="@+id/PRECAUTION"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Effets indésirables"
+                tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/EFIND"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/PRECAUTION"
-        android:layout_alignBottom="@+id/PRECAUTION"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="46dp"
-        android:text="Effets indésirables"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/PRECAUTION"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="25dp"
-        android:text="Précautions"
-        tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/PRECAUTION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Précautions"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

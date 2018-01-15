@@ -37,7 +37,7 @@
         <activity
             android:name=".InfoActivity"
             android:label="Informations sur le médicament scanné"
-            android:screenOrientation="landscape" />
+            />
         <activity android:name=".Accueil">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

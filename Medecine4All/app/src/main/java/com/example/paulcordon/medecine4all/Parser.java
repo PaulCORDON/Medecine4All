@@ -135,15 +135,26 @@ class Parser {
                     tabInfo=info.split("azertyuiop");
 
                     link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
-                    for (String s:link) {
-                        indesirable+=s;
+                    if(link.size()==0){
+                        indesirable="pas d'effets indesirables trouvés";
+                    }
+                    else{
+                        for (String s:link) {
+                            indesirable+=s;
+                        }
                     }
                     Log.d("indesirable","->"+indesirable);
 
                     link = doc.getElementById("div_2").getElementsByClass("AmmListePuces1").eachText();
-                    for (String s:link) {
-                        precaution+=s;
+                    if(link.size()==0){
+                        precaution="pas de précautions";
                     }
+                    else{
+                        for (String s:link) {
+                            precaution+=s;
+                        }
+                    }
+
                     Log.d("precaution","->"+precaution);
 
                     if(classeIsPresent){
