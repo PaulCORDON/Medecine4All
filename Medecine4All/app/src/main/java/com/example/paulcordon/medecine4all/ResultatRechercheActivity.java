@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import org.jsoup.Jsoup;
@@ -19,8 +20,8 @@ public class ResultatRechercheActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Bundle bundle = getIntent().getExtras();
-        int flo;
         assert bundle != null;
         String value = bundle.getString("text");
         assert value != null;

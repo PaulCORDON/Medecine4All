@@ -31,12 +31,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
-
 
 
     /**
@@ -69,30 +66,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.moveCamera(CameraUpdateFactory.newLatLng(myLatLng));*/
 
 
-
             return;
         }
 
 
 
 
- /*       LatLng sydney = new LatLng(-34, 151);
+       LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.setMyLocationEnabled(true);*/
-        LocationManager locationManager = (LocationManager)
-                getSystemService(Context.LOCATION_SERVICE);
+        mMap.setMyLocationEnabled(true);
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
 
-        Location location = locationManager.getLastKnownLocation(locationManager
-                .getBestProvider(criteria, false));
+       /* Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
         LatLng myPosition = new LatLng(latitude, longitude);
         mMap.addMarker(new MarkerOptions().position(myPosition).title("Marker in my postion"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myPosition,15));
-      /*  Location l = new Location(googleMap.getMyLocation());
-        LatLng myPosition = new LatLng(l.getLatitude(),l.getLongitude());
+
 
         mMap.addMarker(new MarkerOptions().position(myPosition).title("Marker in my position "));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(myPosition));*/
