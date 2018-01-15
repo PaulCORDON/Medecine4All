@@ -20,7 +20,7 @@ public class ResultatRechercheActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
-
+        int flo;
         assert bundle != null;
         String value = bundle.getString("text");
         assert value != null;
