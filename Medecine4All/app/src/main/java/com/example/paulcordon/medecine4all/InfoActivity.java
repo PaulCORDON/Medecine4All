@@ -86,9 +86,9 @@ public class InfoActivity extends AppCompatActivity {
 
         TextView prix =  findViewById(R.id.prix);
         if(parser.getPrix().equals("prix")){
-            prix.setVisibility(View.INVISIBLE);
+            prix.setVisibility(View.GONE);
             TextView titrePrix =  findViewById(R.id.Prix);
-            titrePrix.setVisibility(View.INVISIBLE);
+            titrePrix.setVisibility(View.GONE);
         }
         else{
             prix.setText(parser.getPrix());

@@ -16,12 +16,12 @@ class Parser {
 
 
     private String classe = "non trouve";
-    private String molecule = "molecule";
-    private String exipients = "exipients";
-    private String statut = "statut";
+    private String molecule = "Non trouvée";
+    private String exipients = "Non trouvés";
+    private String statut = "Non trouvé";
     private String prix = "prix";
-    private String labo = "laboratoire";
-    private String taux ="taux de remboursement";
+    private String labo = "Non trouvé";
+    private String taux ="Non trouvé";
 
     private boolean classeIsPresent = false;
     private boolean moleculeIsPresent= false;

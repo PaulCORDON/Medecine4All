@@ -18,141 +18,261 @@
 
             <Button
                 android:id="@+id/btn20"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn19"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn18"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn17"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn16"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn15"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn21"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn22"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn23"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn24"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Button"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn25"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn14"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn13"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn12"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn11"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn10"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn9"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn8"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn7"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn6"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn5"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn4"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn3"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn2"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn1"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="Button"
                 android:visibility="gone" />
         </LinearLayout>
