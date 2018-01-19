@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:background= "@drawable/background"
+        android:background= "@drawable/backgroundfixe"
         android:layout_alignParentTop="true">
 
         <LinearLayout
@@ -25,6 +25,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="@string/nom"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:lineSpacingExtra="30sp" />
@@ -39,6 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -47,6 +49,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Classe : "
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -59,6 +62,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -68,6 +72,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Statut : "
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -78,6 +83,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -87,6 +93,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="@string/molecule"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -98,6 +105,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -107,6 +115,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Excipients :"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -120,6 +129,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -129,6 +139,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Laboratoire : "
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -141,6 +152,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -150,6 +162,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Taux de remboursement : "
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -162,6 +175,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <TextView
@@ -171,6 +185,7 @@
                 android:lineSpacingExtra="30sp"
                 android:text="Prix :"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
@@ -183,6 +198,7 @@
                 android:layout_marginTop="10dp"
                 android:text=""
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="18sp" />
 
             <Button
@@ -200,6 +216,7 @@
                 android:elevation="0dp"
                 android:text="Effets indésirables"
                 android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
