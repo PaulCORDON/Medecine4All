@@ -133,7 +133,7 @@ class Parser {
 
                     tabInfo=info.split("azertyuiop");
 
-                    /*link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
+				    link = doc.getElementById("tab-fiche-technique-content4").getElementsByClass("AmmListePuces1").eachText();
                     if(link.size()==0){
                         indesirable="pas d'effets indesirables trouvés";
                     }
@@ -144,7 +144,7 @@ class Parser {
                     }
                     Log.d("indesirable","->"+indesirable);
 
-                    link = doc.getElementById("div_2").getElementsByClass("AmmListePuces1").eachText();
+				    link = doc.getElementById("tab-fiche-technique-content2").getElementsByClass("AmmListePuces1").eachText();
                     if(link.size()==0){
                         precaution="pas de précautions";
                     }
@@ -155,7 +155,7 @@ class Parser {
                     }
 
                     Log.d("precaution","->"+precaution);
-*/
+
                     if(classeIsPresent){
                         classe = tabInfo[classeLocation];
                         Log.d("classe","->"+classe);
@@ -165,7 +165,7 @@ class Parser {
                         Log.d("molecule","->"+molecule);
                     }
                     if(exipientIsPresent){
-                        exipients = tabInfo[exipientLocation];
+                        exipients = tabInfo[exipientLocation].split("...afficher plus d'excipients")[0];
                         Log.d("exipients","->"+exipients);
                     }
                     if(statutIsPresent){
