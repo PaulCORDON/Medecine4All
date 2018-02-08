@@ -81,9 +81,7 @@ public class InfoActivity extends AppCompatActivity {
         TextView exipients =  findViewById(R.id.exipients);
         exipients.setText(parser.getExipients());
 
-        TextView statut =  findViewById(R.id.Statut);
-        statut.setText(parser.getStatut());
-
+       
         TextView prix =  findViewById(R.id.prix);
         if(parser.getPrix().equals("prix")){
             prix.setVisibility(View.GONE);
