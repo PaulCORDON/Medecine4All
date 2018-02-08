@@ -20,8 +20,8 @@ class Parser {
     private String exipients = "Non trouvés";
     private String statut = "Non trouvé";
     private String prix = "prix";
-    private String labo = "Non trouvé";
-    private String taux ="Non trouvé";
+    private String labo = "Non trouve";
+    private String taux ="Non trouve";
 
     private boolean classeIsPresent = false;
     private boolean moleculeIsPresent= false;
@@ -49,8 +49,7 @@ class Parser {
     boolean isUrlValide() {
         return urlValide;
     }
-    String getPrix() {
-        return prix;    }
+    String getPrix() {return prix;}
     String getClasse() {return classe;}
     String getMolecule() {
         return molecule;
@@ -80,20 +79,20 @@ class Parser {
             @Override
             public void run() {
                 try {
-                    Log.d("info","try");
+                    Log.d("info voici l'URL",urlCopie);
                     String info;
                     String tabInfo[];
                     // Connection au site
                     Document doc = Jsoup.connect(urlCopie).get();
 
-                    List<String> link = doc.getElementsByClass("medtab").eachText();
+                    List<String> link = doc.getElementsByAttribute("width").eachText();
 
                     info=link.get(0);
-                    if(info.contains("Classe thérapeutique")){
+                    if(info.contains("Classes thérapeutiques")){
                         classeIsPresent=true;
                         classeLocation=location;
                         location++;
-                        info=info.replaceFirst("Classe thérapeutique","azertyuiop");
+                        info=info.replaceFirst("Classes thérapeutiques","azertyuiop");
                     }
                     if(info.contains("Principes actifs")){
                        moleculeIsPresent=true;
@@ -119,11 +118,11 @@ class Parser {
                        location++;
                        info=info.replaceFirst("Prix de vente TTC","azertyuiop");
                     }
-                    if(info.contains("Tx de remboursement SS")){
+                    if(info.contains("Taux de remboursement Sécurité Sociale")){
                         tauxIsPresent=true;
                         tauxLocation=location;
                         location++;
-                        info=info.replaceFirst("Tx de remboursement SS","azertyuiop");
+                        info=info.replaceFirst("Taux de remboursement Sécurité Sociale","azertyuiop");
                     }
                     if(info.contains("Laboratoire")){
                         laboIsPresent=true;
@@ -134,7 +133,7 @@ class Parser {
 
                     tabInfo=info.split("azertyuiop");
 
-                    link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
+                    /*link = doc.getElementById("div_4").getElementsByClass("AmmListePuces1").eachText();
                     if(link.size()==0){
                         indesirable="pas d'effets indesirables trouvés";
                     }
@@ -156,7 +155,7 @@ class Parser {
                     }
 
                     Log.d("precaution","->"+precaution);
-
+*/
                     if(classeIsPresent){
                         classe = tabInfo[classeLocation];
                         Log.d("classe","->"+classe);

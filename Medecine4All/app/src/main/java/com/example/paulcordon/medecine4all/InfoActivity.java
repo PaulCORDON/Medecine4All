@@ -67,8 +67,8 @@ public class InfoActivity extends AppCompatActivity {
 
         }
 
-        while(parser.getClasse().equals("non trouve")&& parser.isUrlValide()){
-            Log.d("info","after try catch info");
+        while(parser.getLabo().equals("Non trouve")&& parser.isUrlValide()){
+            //Log.d("info","after try catch info");
 
         }
         Log.d("info","after while urlValide ->"+parser.isUrlValide());
