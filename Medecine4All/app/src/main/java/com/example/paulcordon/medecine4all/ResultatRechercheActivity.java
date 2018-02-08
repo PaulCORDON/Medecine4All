@@ -5,15 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ResultatRechercheActivity extends AppCompatActivity {
 
@@ -78,10 +72,11 @@ public class ResultatRechercheActivity extends AppCompatActivity {
 
 
 
-        while(p.link1==null){
-
+        while(p.enCour){
+        Log.d("tag","link 1 null");
         }
         if(p.link1.size()==0){
+            Log.d("tag","link 1 vide");
             btn1.setText("Aucun resultat");
             btn1.setVisibility(View.VISIBLE);
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -94,12 +89,14 @@ public class ResultatRechercheActivity extends AppCompatActivity {
            
         }
         else if (p.link1.size()==1){
+            Log.d("tag","link 1 1 seul résultat");
             Intent in=new Intent(ResultatRechercheActivity.this,InfoActivity.class);
             Bundle b = new Bundle();
             in.putExtra("text",p.link1.get(0));
             startActivity(in);
         }
         else{
+            Log.d("tag","link 1 plusieurs résultats");
             for(int i=0;i<p.link1.size() && i<btnList.size();i++){
                 btnList.get(i).setText(p.link1.get(i));
                 btnList.get(i).setVisibility(View.VISIBLE);

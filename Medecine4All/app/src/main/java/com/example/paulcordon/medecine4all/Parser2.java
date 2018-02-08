@@ -4,8 +4,10 @@ import android.util.Log;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,26 +16,31 @@ import java.util.List;
 
  class Parser2 {
 
-   List<String> link1=null;
-    private boolean urlValide=true;
-
-
+     List<String> link1;
+    public boolean enCour =true;
+     private boolean urlValide=true;
     boolean isUrlValide() {
         return urlValide;
     }
 
 
     void execute (String url){
-        final String recherche=url;
+        final String recherche=url.toLowerCase();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
+                link1= new ArrayList<String>();
                 try {
                     Document doc;
-                    doc=Jsoup.connect("http://sante.doctissimo.fr/medicaments/recherche-medicament.htm").data("search",recherche).data("but_go.x","59").data("but_go.y","14").data("but_go","ok").post();
-                    link1 = doc.getElementsByClass("lien_bleu").eachText();
+                    Log.d("je suis dans parser2 ", "avant connect"+recherche);
+                    doc=Jsoup.connect("http://www.doctissimo.fr/recherche-medicament.htm?medicine_search%5Bquery%5D="+recherche).get();
 
+                    for(Element s:doc.getElementsByClass("multi-columns-2")) {
+                        Log.d("dans le for","coucou"+s);
+                        link1=s.getElementsByAttribute("href").eachText();
+                    }
+                    enCour =false;
                 }
                 catch (IOException e) {
                     e.printStackTrace();
