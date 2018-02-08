@@ -76,15 +76,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/Statut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:textAlignment="center"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="18sp" />
+            
 
             <TextView
                 android:id="@+id/textView5"
@@ -203,7 +195,7 @@
 
             <Button
                 android:id="@+id/EFIND"
-                style="@android:style/Widget.Holo.Button"
+                style="@style/RbButton.Inverse.Rounded.Green"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/PRECAUTION"
@@ -223,7 +215,7 @@
 
             <Button
                 android:id="@+id/PRECAUTION"
-                style="@android:style/Widget.Holo.Button"
+                style="@style/RbButton.Inverse.Rounded.Green"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
